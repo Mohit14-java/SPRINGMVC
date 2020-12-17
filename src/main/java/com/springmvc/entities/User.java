@@ -1,6 +1,13 @@
-package springmvc.entities;
+package com.springmvc.entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "User_info")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String userName;
     private String email;
     private String password;
